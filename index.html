@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			*,
+			h3 {
+				margin: 0;
+				padding: 0;
+				color: white;
+				list-style: none;
+			}
+			
+			h3 {
+				text-align: center;
+				line-height: 200px;
+			}
+			/*个人情况*/
+			
+			.person,
+			.person a {
+				background: blue;
+				color: white;
+				font-size: 1.2em;
+			}
+			/*图片设置*/
+			
+			.imgs {
+				width: 150px;
+				text-align: center;
+				margin: 5% 0;
+			}
+			
+			.imgs img,
+			.flip-container,
+			.front,
+			.back {
+				width: 150px;
+				height: 220px;
+				border-radius: 50px;
+			}
+			
+			.flip-container {
+				perspective: 1000;
+			}
+			
+			.flip-container:hover .flipper,
+			.flip-container.hover .flipper {
+				transform: rotateY(180deg);
+			}
+			
+			.flipper {
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			.front,
+			.back {
+				backface-visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.front {
+				z-index: 2;
+			}
+			
+			.back {
+				transform: rotateY(180deg);
+				background: black;
+				color: white;
+				text-align: left;
+				line-height: 30px;
+				text-indent: 2em;
+			}
+			
+			.back span {
+				margin-top: 20px;
+				word-spacing: 8px;
+				line-height: 130%;
+				text-align: left;
+			}
+			
+			.person li {
+				margin: 5% 0;
+			}
+			/*工作技能*/
+			
+			.job {
+				background: blueviolet;
+			}
+			
+			.job .job-menu {
+				font-size: 1.2rem;
+				margin-top: 5%;
+			}
+			
+			.job .job-menu li {
+				height: 40px;
+				text-align: center;
+				border-radius: 10px;
+				line-height: 40px;
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.job .job-menu li:hover {
+				font-size: 1.8rem;
+				background: white;
+				color: black;
+			}
+			
+			.job .job-menu ul {
+				border: solid white 1px;
+				border-radius: 15px;
+			}
+			
+			.job .span2 {
+				border-radius: 15px;
+				text-align: center;
+			}
+			
+			.job .span2 strong {
+				height: 30px;
+				margin-left: 10px;
+				display: inline-block;
+			}
+			
+			@media screen and (max-width: 900px) {
+				.job .span2{
+					width: 127px;
+				}
+				.job .row-fluid{
+					min-width: 700px;
+				}
+			}
+			/*项目经验*/
+			
+			.live {
+				background: rgba(38, 177, 182, 0.5);
+			}
+			/*联系方式*/
+			
+			.contact {
+				background: yellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="person">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span5">
+
+					</div>
+					<div class="imgs span2">
+						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<img src="img/131608020136_meitu_2.jpg" />
+								</div>
+								<div class="back">
+									<span>善于学习，经常学习能人编写前端的视频，有较强的沟通能力，并且一直想扩充自己的前端技术。</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="person-first">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<ul class="span1">
+						</ul>
+						<ul class="span3">
+							<li>2016年6月28日</li>
+							<li>开启了我的前端之路</li>
+							<li class="date"></li>
+						</ul>
+						<ul class="span1">
+						</ul>
+						<ul class="span3">
+							<li>姓名丨卢思源</li>
+							<li>年龄丨<span class="dates"></span></li>
+							<li>手机丨15538377105</li>
+							<li>邮箱丨lvy993@163.com</li>
+							<li>GitHub丨
+								<a href="https://github.com/lvy993">点击跳转</a>
+							</li>
+						</ul>
+						<ul class="span1">
+						</ul>
+						<ul class="span3">
+							<li>基本技能丨HTML5/css3</li>
+							<li>javaScript/JQuery</li>
+							<li>bootstrap开发框架</li>
+							<li>熟悉PHP/ajax数据交互</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="job">
+			<h3>专业技能</h3>
+			<div class="container-fluid job-menu">
+				<div class="row-fluid">
+					<div class="span2"></div>
+					<div class="span2">
+						<strong>语言</strong>
+						<ul>
+							<li>HTML(5)</li>
+							<li>CSS(3)</li>
+							<li>Javascript</li>
+							<li>PHP</li>
+						</ul>
+					</div>
+					<!--<div class="span1"></div>-->
+					<div class="span2">
+						<strong>技术</strong>
+						<ul>
+							<li>ajax</li>
+							<li>canvas</li>
+							<li>jsonp</li>
+							<li>Git</li>
+						</ul>
+					</div>
+					<!--<div class="span1"></div>-->
+					<div class="span2">
+						<strong>框架</strong>
+						<ul>
+							<li>bootsrap</li>
+							<li>JQery</li>
+							<li>anjular.js</li>
+						</ul>
+					</div>
+					<!--<div class="span1"></div>-->
+					<div class="span2 biancheng">
+						<strong>编程思想</strong>
+						<ul>
+							<li>标签语义化</li>
+							<li>响应式设计</li>
+							<li>W3C标准</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="live">
+			<h3>项目经验</h3>
+		</div>
+		<div class="contact">
+			<h3>联系方式</h3>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		/*
+					模块高度
+				*/
+		heightSet();
+
+		function heightSet() {
+			$(".person,.job,.live,.contact").each(function() {
+				$(this).css('height', $(window).height())
+			})
+		}
+
+		/*
+		 * 获取当前时间
+		 */
+		function p(s) {
+			return s < 10 ? '0' + s : s;
+		}
+
+		// 使用时间
+		function getTime() {
+			let now = new Date()
+				// 工作时间
+			let start = new Date('2016/06/28 00:00')
+			let leftTime = Math.ceil((now.getTime() - start.getTime()) / 1000) // 得出进行的秒数
+			let year = Math.floor(leftTime / 60 / 60 / 24 / 365) // 年
+			let month = Math.floor(leftTime / 60 / 60 / 24 / 30 % 12) // 月
+			let day = Math.floor(leftTime / 60 / 60 / 24 % 365 % 30) // 日
+			let minute = Math.floor(leftTime / 60 % 60) // 分
+			let seconds = leftTime % 60 // 秒
+			let nowTime = '至今已经:' + '<br>' + year + '年' + month + '个月' + day + '天' + '<br>' + minute + '分' + seconds + '秒'
+			$(".date").html(nowTime)
+				// 生日
+			let birthday = new Date('1993/02/03 ')
+			let survival = Math.ceil((now.getTime() - birthday.getTime()) / 1000) // 得出进行的秒数
+			let Syear = Math.floor(survival / 60 / 60 / 24 / 365) // 年
+			let Smonth = Math.floor(survival / 60 / 60 / 24 / 30 % 12) // 月
+			let Sday = Math.floor(survival / 60 / 60 / 24 % 365 % 30) // 日
+			let birthdayTime = Syear + '年' + Smonth + '个月' + Sday + '天'
+			$(".dates").html(birthdayTime)
+		}
+		window.onload = function() {
+			//定时器每秒调用一次fnDate()
+			setInterval(function() {
+				getTime();
+			}, 1000);
+		}
+	</script>
+
+</html>
