@@ -1,0 +1,210 @@
+	*,
+			h3 {
+				margin: 0;
+				padding: 0;
+				color: white;
+				list-style: none;
+			}
+			
+			h3 {
+				text-align: center;
+				line-height: 200px;
+			}
+			/*个人情况*/
+			
+			.person,
+			.person a {
+				background: #0f0f46;
+				color: white;
+				font-size: 1.2em;
+			}
+			
+			.person li {
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			/*图片设置*/
+			
+			.imgs {
+				width: 150px;
+				text-align: center;
+				margin: 5% 0;
+			}
+			
+			.imgs img,
+			.flip-container,
+			.front,
+			.back {
+				width: 150px;
+				height: 220px;
+				border-radius: 50px;
+			}
+			
+			.flip-container {
+				perspective: 1000;
+			}
+			
+			.flip-container:hover .flipper,
+			.flip-container.hover .flipper {
+				transform: rotateY(180deg);
+			}
+			
+			.flipper {
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			.front,
+			.back {
+				backface-visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.front {
+				z-index: 2;
+			}
+			
+			.back {
+				transform: rotateY(180deg);
+				background: black;
+				color: white;
+				text-align: left;
+				line-height: 30px;
+				text-indent: 2em;
+			}
+			
+			.back span {
+				margin-top: 20px;
+				word-spacing: 8px;
+				line-height: 130%;
+				text-align: left;
+			}
+			
+			.person li {
+				margin: 5% 0;
+			}
+			/*工作技能*/
+			
+			.job {
+				background: blueviolet;
+			}
+			
+			.job .job-menu {
+				font-size: 1.2rem;
+				margin-top: 5%;
+			}
+			
+			.job .job-menu li {
+				height: 40px;
+				text-align: center;
+				border-radius: 10px;
+				line-height: 40px;
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.job .job-menu li:hover {
+				font-size: 1.8rem;
+				background: white;
+				color: black;
+			}
+			
+			.job .job-menu ul {
+				border: solid white 1px;
+				border-radius: 15px;
+			}
+			
+			.job .span2 {
+				border-radius: 15px;
+				text-align: center;
+			}
+			
+			.job .span2 strong {
+				height: 30px;
+				margin-left: 10px;
+				display: inline-block;
+			}
+			
+			@media screen and (max-width: 900px) {
+				.job .span2 {
+					width: 127px;
+				}
+				.job .row-fluid {
+					min-width: 700px;
+				}
+			}
+			/*项目经验*/
+			
+			.live {
+				background: rgba(182, 78, 38, 0.5);
+			}
+			
+			.live h3 {
+				line-height: 100px;
+			}
+			.live img{
+				width: 100%;
+				height: 400px;
+				margin-left: 60px;
+				border-radius: 20px;
+			}
+			.live .active a{
+				width: 50%;
+				display: inline-block;
+			}
+			.carousel-indicators{
+				position: absolute;
+				text-align: left;
+				left: 50%;
+				top: 103%;
+			}
+			.active{
+				position: relative;
+				overflow: hidden;
+			}
+			.active #jieshi{
+				width: 40%;
+				font-size: 1.3rem;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.active #jieshi li{
+				line-height: 30px;
+			}
+			.active #jieshi li span{
+				color: black;
+				font-size: 1.5rem;
+			}
+			.hongdian{
+				background: red;
+			}
+			/*联系方式*/
+			
+			.contact {
+				background:burlywood;
+			}
+			.contact textarea{
+				width: 100%;
+				height: 60px;
+				font-size: 1.2rem;
+				line-height: 60px;
+				text-indent: 2em;
+			}
+			.contact div {
+				text-align: center;
+				font-size: 1.5rem;
+				line-height: 60px;
+			}
+			.contact li {
+				text-align: center;
+				font-size: 1.5rem;
+				line-height: 60px;
+			}
