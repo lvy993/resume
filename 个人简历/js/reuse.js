@@ -45,3 +45,16 @@
 				getTime();
 			}, 1000);
 		}
+		$(function() {
+	var massage = {
+		简历评价:"做的比较粗糙,轮播有bug,未适应小屏. 自己给及格分吧",
+		name: "卢思源",
+		sex: "男",
+		age: "24",
+		phone:"15538377105",
+		email:"lvy993@163.com"
+	}
+	for(var num in massage) {
+		console.log(num+":"+massage[num])
+	}
+});
